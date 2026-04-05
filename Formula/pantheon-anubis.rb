@@ -5,21 +5,21 @@
 class PantheonAnubis < Formula
   desc "Infrastructure scanner and cleaner — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.12.1"
+  version "0.12.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-anubis_0.12.1_darwin_amd64.tar.gz"
-      sha256 "fb1f250410b7933cb56ef426cd2857f43c52d6b5b28c798a5a3b1709ad51a601"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-anubis_0.12.2_darwin_amd64.tar.gz"
+      sha256 "7d545971c40bf3a0e332755fc7daf7a942edfc23ccb14bd638516687da0f8c7d"
 
       define_method(:install) do
         bin.install "pantheon-anubis"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-anubis_0.12.1_darwin_arm64.tar.gz"
-      sha256 "aed348304d339a66e004f504dbb3db142501150601f47b65822ac51d25ea0aa5"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-anubis_0.12.2_darwin_arm64.tar.gz"
+      sha256 "51fa3b39e31bd4344cf1c4afe49595856415dc3e9bd9229bc634c9ded9d8529e"
 
       define_method(:install) do
         bin.install "pantheon-anubis"
@@ -29,15 +29,15 @@ class PantheonAnubis < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-anubis_0.12.1_linux_amd64.tar.gz"
-      sha256 "13c19e88f288007556b32776741f5f2cf377d27a8eb7c7575d0c35173c7bb404"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-anubis_0.12.2_linux_amd64.tar.gz"
+      sha256 "e9f035fc1623991985bb482e0ada205d1bbcb3fb0cb7dcf4cf944f60b6996bc2"
       define_method(:install) do
         bin.install "pantheon-anubis"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-anubis_0.12.1_linux_arm64.tar.gz"
-      sha256 "b58f67fb2effc13e96b75a2589de7dd46f9eda39eb0a85cd508f5a469455cf32"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-anubis_0.12.2_linux_arm64.tar.gz"
+      sha256 "b04420bbfa82e17a2a662e0a0a42a88c7e09ffa7769068de8982924d7c6c0466"
       define_method(:install) do
         bin.install "pantheon-anubis"
       end
