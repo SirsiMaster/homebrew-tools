@@ -5,21 +5,21 @@
 class PantheonScarab < Formula
   desc "Fleet sweep and network discovery — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.12.1"
+  version "0.12.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-scarab_0.12.1_darwin_amd64.tar.gz"
-      sha256 "4c1631f338700c5ce3805f957abde7bda98e8d2eeaef4c0f37356b7e7224c7e5"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-scarab_0.12.2_darwin_amd64.tar.gz"
+      sha256 "2c6aa9485601d2a5246896d6c4aa3d8dc74e78d7fb56a4ec227fdfd96ad91a68"
 
       define_method(:install) do
         bin.install "pantheon-scarab"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-scarab_0.12.1_darwin_arm64.tar.gz"
-      sha256 "54418cb5ffacd96225ff768ed0bcf35924c55859050f88a6c985cbb3b2f968a8"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-scarab_0.12.2_darwin_arm64.tar.gz"
+      sha256 "7b617ecb233e6640c3179d4c9ef7530eb7bb2f7968cb5d39e947910781eee1fe"
 
       define_method(:install) do
         bin.install "pantheon-scarab"
@@ -29,15 +29,15 @@ class PantheonScarab < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-scarab_0.12.1_linux_amd64.tar.gz"
-      sha256 "fd0ecaebd0467e4a3e3a2eef31070404c5009a4a5690c320cbabb5bcfd7535f0"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-scarab_0.12.2_linux_amd64.tar.gz"
+      sha256 "dcc3784a04d3afc97b6e4598bb5d4dfec2c1b952495283a3376a5041926dc0f4"
       define_method(:install) do
         bin.install "pantheon-scarab"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-scarab_0.12.1_linux_arm64.tar.gz"
-      sha256 "bf89c744493d552ed04f629ef7300414da103e5dba89b0d96e898f57af2d1b52"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-scarab_0.12.2_linux_arm64.tar.gz"
+      sha256 "cf0673e9be430f6dd0e31cd88cd4d20eb67d0073e86ac9ea0008020b5d546bb8"
       define_method(:install) do
         bin.install "pantheon-scarab"
       end
