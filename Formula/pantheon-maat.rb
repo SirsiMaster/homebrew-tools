@@ -5,21 +5,21 @@
 class PantheonMaat < Formula
   desc "Quality assurance and audit engine — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.12.1"
+  version "0.12.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-maat_0.12.1_darwin_amd64.tar.gz"
-      sha256 "f28e9d4631b0db93fd81d21ae06b507dc703d0b5497f0df662031271c58b59cb"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-maat_0.12.2_darwin_amd64.tar.gz"
+      sha256 "67dc0302d129fc2ba7dee6769a28293ed31a66aa92af1d5ea2fba961a1c204be"
 
       define_method(:install) do
         bin.install "pantheon-maat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-maat_0.12.1_darwin_arm64.tar.gz"
-      sha256 "737acf3cd7d9f3a15eb53eb529485a176a8ad0949bf4cce819505d60a6e3c500"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-maat_0.12.2_darwin_arm64.tar.gz"
+      sha256 "eca6d8b1af522347a2aaafafc1c949c1743ad72ec020e0efa35c9d91b0f0c9fb"
 
       define_method(:install) do
         bin.install "pantheon-maat"
@@ -29,15 +29,15 @@ class PantheonMaat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-maat_0.12.1_linux_amd64.tar.gz"
-      sha256 "3bf6ca83247d081522ab9103eb4a39c1a659647f1201464afe2f0743d73eed75"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-maat_0.12.2_linux_amd64.tar.gz"
+      sha256 "dbb45678d50eda0efa5b8e3316da1eb7453fca65321bfef8d811c9a01ca55294"
       define_method(:install) do
         bin.install "pantheon-maat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-maat_0.12.1_linux_arm64.tar.gz"
-      sha256 "dc736cd1ffb3c017e25ce0e372236784ee717453231d6da843006316f4f38036"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.2/pantheon-maat_0.12.2_linux_arm64.tar.gz"
+      sha256 "22d513faa75ef8ffde4167cbebe788d6fe3a7b50dcbe9f6eb8d3dd14b8f5761e"
       define_method(:install) do
         bin.install "pantheon-maat"
       end
