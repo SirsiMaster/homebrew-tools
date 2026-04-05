@@ -5,21 +5,21 @@
 class PantheonGuard < Formula
   desc "System resource monitoring with accelerator detection — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.12.0"
+  version "0.12.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.0/pantheon-guard_0.12.0_darwin_amd64.tar.gz"
-      sha256 "a3144084a9516fdcc54bf4d004ffb4c140186447369e524cd0f7e12c5cfa2868"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-guard_0.12.1_darwin_amd64.tar.gz"
+      sha256 "3b5f17e838a1832f8dc88bb173434a0a5bc00ca30f1f9e6f75d084f38249c1bb"
 
       define_method(:install) do
         bin.install "pantheon-guard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.0/pantheon-guard_0.12.0_darwin_arm64.tar.gz"
-      sha256 "87f11e60061c91aa8080b7bad5eb190023f7cd4bcc4bb1698f931800e43f5e61"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-guard_0.12.1_darwin_arm64.tar.gz"
+      sha256 "aa450f0909020ab2e5c65160da5dadeca7108fd30b37ef338e46efd10dd97872"
 
       define_method(:install) do
         bin.install "pantheon-guard"
@@ -29,15 +29,15 @@ class PantheonGuard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.0/pantheon-guard_0.12.0_linux_amd64.tar.gz"
-      sha256 "0efd428127f755f70536fd0d59d2fa0b6ed3253e01ce4b94a9595ffc8174ffb8"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-guard_0.12.1_linux_amd64.tar.gz"
+      sha256 "067c27fedbf76e52da084ed74bdcdd03168c74fa9cdd3cb3f27e02d050b832d5"
       define_method(:install) do
         bin.install "pantheon-guard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.0/pantheon-guard_0.12.0_linux_arm64.tar.gz"
-      sha256 "e3080f0276b2012f3dd3a6f5afb79feccc8dc45d60d72dd8513168ccf6038394"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-guard_0.12.1_linux_arm64.tar.gz"
+      sha256 "ce42f21fe46c2440910b5861813e7938377463baa2d87a6fe99b5651a1e96690"
       define_method(:install) do
         bin.install "pantheon-guard"
       end
