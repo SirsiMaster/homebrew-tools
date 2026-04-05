@@ -5,21 +5,21 @@
 class PantheonThoth < Formula
   desc "AI project memory with context compression — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.12.0"
+  version "0.12.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.0/pantheon-thoth_0.12.0_darwin_amd64.tar.gz"
-      sha256 "8fff4c519751cea3fe3351b64c83efe1758b115d4b1cbbf25155c6c4c91e9b8d"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-thoth_0.12.1_darwin_amd64.tar.gz"
+      sha256 "df176dd16e57a26aa207e896c0fed703903871ad24ff776e501467d83a016284"
 
       define_method(:install) do
         bin.install "pantheon-thoth"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.0/pantheon-thoth_0.12.0_darwin_arm64.tar.gz"
-      sha256 "f75ca388cf8df6cd940348cbd09b8c7bb60cb6c2cb687c45f537dc6727bb89b0"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-thoth_0.12.1_darwin_arm64.tar.gz"
+      sha256 "209bf2ada63b3d63915644cec314da3070d82a42173847b1172b40410973e0ca"
 
       define_method(:install) do
         bin.install "pantheon-thoth"
@@ -29,15 +29,15 @@ class PantheonThoth < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.0/pantheon-thoth_0.12.0_linux_amd64.tar.gz"
-      sha256 "70143d6b36828c04a530fb7e6948054db729d6a2c09a50587f7bc01a1cb1283a"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-thoth_0.12.1_linux_amd64.tar.gz"
+      sha256 "37b10969b116e8f80cceb560df98edfc673fef6a74c1cfc38fdefb344a06acd2"
       define_method(:install) do
         bin.install "pantheon-thoth"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.0/pantheon-thoth_0.12.0_linux_arm64.tar.gz"
-      sha256 "e12ccb1ce3a25cd68dc9e6dc45cda2ed7f92d332696c6d29fecaf037d0d7e5b6"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.12.1/pantheon-thoth_0.12.1_linux_arm64.tar.gz"
+      sha256 "670ff28c358eaa823f565ddb715fd7884658ab4b865a4153106cdd00de2d6542"
       define_method(:install) do
         bin.install "pantheon-thoth"
       end
