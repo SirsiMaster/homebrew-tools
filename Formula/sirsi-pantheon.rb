@@ -5,70 +5,70 @@
 class SirsiPantheon < Formula
   desc "Unified DevOps Intelligence Platform — One Install, All Deities"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.15.0"
-  license "MIT"
+  version "0.16.0-alpha"
+  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.15.0/sirsi-pantheon_0.15.0_darwin_amd64.tar.gz"
-      sha256 "a42b099678fd5698aeb49bb07a6a93a58425387dfed53a80da5d99b30cc04daf"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-pantheon_0.16.0-alpha_darwin_amd64.tar.gz"
+      sha256 "3235da8fb537eee162e5276b605c99792af3e2a368ec8a7bc081a256652215c3"
 
       define_method(:install) do
-        bin.install "pantheon"
-        bin.install "pantheon-agent"
-        bin.install "pantheon-anubis"
-        bin.install "pantheon-maat"
-        bin.install "pantheon-thoth"
-        bin.install "pantheon-scarab"
-        bin.install "pantheon-guard"
+        bin.install "sirsi"
+        bin.install "sirsi-agent"
+        bin.install "sirsi-anubis"
+        bin.install "sirsi-maat"
+        bin.install "sirsi-thoth"
+        bin.install "sirsi-scarab"
+        bin.install "sirsi-guard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.15.0/sirsi-pantheon_0.15.0_darwin_arm64.tar.gz"
-      sha256 "6d049a23442d573f3cbaf1b07ec9c90a27f201886d3f5844a22f2c2830cef846"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-pantheon_0.16.0-alpha_darwin_arm64.tar.gz"
+      sha256 "edef6e119e5f97c250d753d7c34c7931ad9fcdff0d0e04c3997aa839e222825a"
 
       define_method(:install) do
-        bin.install "pantheon"
-        bin.install "pantheon-agent"
-        bin.install "pantheon-anubis"
-        bin.install "pantheon-maat"
-        bin.install "pantheon-thoth"
-        bin.install "pantheon-scarab"
-        bin.install "pantheon-guard"
+        bin.install "sirsi"
+        bin.install "sirsi-agent"
+        bin.install "sirsi-anubis"
+        bin.install "sirsi-maat"
+        bin.install "sirsi-thoth"
+        bin.install "sirsi-scarab"
+        bin.install "sirsi-guard"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.15.0/sirsi-pantheon_0.15.0_linux_amd64.tar.gz"
-      sha256 "36a626849729c3fcf04a79cf688ce1cdabad0fbddd1537e472c606167b121e8e"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-pantheon_0.16.0-alpha_linux_amd64.tar.gz"
+      sha256 "e338bd6510b3f271a097d75478f8a16e7cf8ceda106f4aa106cac312bcddae35"
       define_method(:install) do
-        bin.install "pantheon"
-        bin.install "pantheon-agent"
-        bin.install "pantheon-anubis"
-        bin.install "pantheon-maat"
-        bin.install "pantheon-thoth"
-        bin.install "pantheon-scarab"
-        bin.install "pantheon-guard"
+        bin.install "sirsi"
+        bin.install "sirsi-agent"
+        bin.install "sirsi-anubis"
+        bin.install "sirsi-maat"
+        bin.install "sirsi-thoth"
+        bin.install "sirsi-scarab"
+        bin.install "sirsi-guard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.15.0/sirsi-pantheon_0.15.0_linux_arm64.tar.gz"
-      sha256 "7d1691643bfe8397da1f1f36699659ec159e40c5d9ffc47d0451cbc2db57fe9c"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-pantheon_0.16.0-alpha_linux_arm64.tar.gz"
+      sha256 "bf15f4b7013beab76ec84f9aac76a7ff5f5b24cf698e6013cfa6a74356a615d7"
       define_method(:install) do
-        bin.install "pantheon"
-        bin.install "pantheon-agent"
-        bin.install "pantheon-anubis"
-        bin.install "pantheon-maat"
-        bin.install "pantheon-thoth"
-        bin.install "pantheon-scarab"
-        bin.install "pantheon-guard"
+        bin.install "sirsi"
+        bin.install "sirsi-agent"
+        bin.install "sirsi-anubis"
+        bin.install "sirsi-maat"
+        bin.install "sirsi-thoth"
+        bin.install "sirsi-scarab"
+        bin.install "sirsi-guard"
       end
     end
   end
 
   test do
-    system "#{bin}/pantheon", "version"
+    system "#{bin}/sirsi", "version"
   end
 end
