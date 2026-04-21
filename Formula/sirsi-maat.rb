@@ -5,21 +5,21 @@
 class SirsiMaat < Formula
   desc "Quality assurance and audit engine — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.16.0-alpha"
+  version "0.17.0-alpha"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-maat_0.16.0-alpha_darwin_amd64.tar.gz"
-      sha256 "817d4df500dfe4c08cd1132fef13a3cd4d656761180b54935ad28c8347a6ec3d"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-maat_0.17.0-alpha_darwin_amd64.tar.gz"
+      sha256 "15320bed3fc782f234c567c301e72c4c6f63e748e7d25dd585785103a0818f0c"
 
       define_method(:install) do
         bin.install "sirsi-maat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-maat_0.16.0-alpha_darwin_arm64.tar.gz"
-      sha256 "e0ab555d3a9784016ca8563bf92bbb78220ea1b82664a10ebbf92c385a68cdee"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-maat_0.17.0-alpha_darwin_arm64.tar.gz"
+      sha256 "a3dbc06e598bdc99f37d899084a40e0c84bcfee03644e0f387744e989b701461"
 
       define_method(:install) do
         bin.install "sirsi-maat"
@@ -29,15 +29,15 @@ class SirsiMaat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-maat_0.16.0-alpha_linux_amd64.tar.gz"
-      sha256 "b78db5bfce206893c501709f62b941c0ac35b7096f6bba0525e56062d45fcbbf"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-maat_0.17.0-alpha_linux_amd64.tar.gz"
+      sha256 "b83451a489dcf0df6f6280d0356314f8d61d6c0f64d727cedd0d3973476a6c28"
       define_method(:install) do
         bin.install "sirsi-maat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-maat_0.16.0-alpha_linux_arm64.tar.gz"
-      sha256 "4299be1916d4e89252cf6bf603755253481be070669cde88d2d5a9c54fb2ac67"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-maat_0.17.0-alpha_linux_arm64.tar.gz"
+      sha256 "f54c3b1e246f1226949128859d1daf298da48421062f8e3bd607e073bae3a0af"
       define_method(:install) do
         bin.install "sirsi-maat"
       end
