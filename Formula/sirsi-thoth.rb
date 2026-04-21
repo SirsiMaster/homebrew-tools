@@ -5,21 +5,21 @@
 class SirsiThoth < Formula
   desc "AI project memory with context compression — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.16.0-alpha"
+  version "0.17.0-alpha"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-thoth_0.16.0-alpha_darwin_amd64.tar.gz"
-      sha256 "c1fd56a3df76b26f4f259a4dffe84c80fc116897a7ec6cb539c2818668ca9072"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-thoth_0.17.0-alpha_darwin_amd64.tar.gz"
+      sha256 "3960acd9caefd14c614854ecf234bac6854d2ec6e8cafce62f28dd254274be35"
 
       define_method(:install) do
         bin.install "sirsi-thoth"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-thoth_0.16.0-alpha_darwin_arm64.tar.gz"
-      sha256 "0802fa33aabe3eb4b7d831d59670245698fca1a638e2548a36a24d2b59213e35"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-thoth_0.17.0-alpha_darwin_arm64.tar.gz"
+      sha256 "4282f82a302b28f00fe185d9c0c4cb0ff9fd0a1a2d696d02e38e56461b08f831"
 
       define_method(:install) do
         bin.install "sirsi-thoth"
@@ -29,15 +29,15 @@ class SirsiThoth < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-thoth_0.16.0-alpha_linux_amd64.tar.gz"
-      sha256 "37770e308ff8bc768349637448ea2221712b3710c00928a37cc5a00b86414c61"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-thoth_0.17.0-alpha_linux_amd64.tar.gz"
+      sha256 "51654dbd093584727065479b5c39bf6f2f3990646c4142e32f137ddeaf05ec51"
       define_method(:install) do
         bin.install "sirsi-thoth"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-thoth_0.16.0-alpha_linux_arm64.tar.gz"
-      sha256 "b4527086bdb9ba264188a81fdf1095692279be69e2a4b4350ae6f0ec25fca87f"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-thoth_0.17.0-alpha_linux_arm64.tar.gz"
+      sha256 "2bbbe6646125e88dc77dffc71d59fd5d40ab717bd5b597fb62ee3f9c372d83de"
       define_method(:install) do
         bin.install "sirsi-thoth"
       end
