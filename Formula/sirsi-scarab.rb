@@ -5,21 +5,21 @@
 class SirsiScarab < Formula
   desc "Fleet sweep and network discovery — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.16.0-alpha"
+  version "0.17.0-alpha"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-scarab_0.16.0-alpha_darwin_amd64.tar.gz"
-      sha256 "b6ed85f44f8a88709577266e6c363ac67f9ff4599c9f5992b5150e198c0ea089"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-scarab_0.17.0-alpha_darwin_amd64.tar.gz"
+      sha256 "0f74069a10b0a29ef432f403a0672cb29fc6d4ef576d853df179eba9df2364c5"
 
       define_method(:install) do
         bin.install "sirsi-scarab"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-scarab_0.16.0-alpha_darwin_arm64.tar.gz"
-      sha256 "fe8dbac0f94d080142d36dea088eaba2c6831ce53f34decf3dd9383ba95bd688"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-scarab_0.17.0-alpha_darwin_arm64.tar.gz"
+      sha256 "96d9e01dfbb72f58b5f49747b6496016f011e311516c0922fea86cb507b83a7a"
 
       define_method(:install) do
         bin.install "sirsi-scarab"
@@ -29,15 +29,15 @@ class SirsiScarab < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-scarab_0.16.0-alpha_linux_amd64.tar.gz"
-      sha256 "e81fb9201f1851f3b351e0b7315b41214a716c0d0bf35bafd264d9b9a6ef7c16"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-scarab_0.17.0-alpha_linux_amd64.tar.gz"
+      sha256 "71a2b70bea7a7ee741cb0049f1bc63d97b674b8603da1ffc8a1e7f7427abe9cd"
       define_method(:install) do
         bin.install "sirsi-scarab"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.16.0-alpha/sirsi-scarab_0.16.0-alpha_linux_arm64.tar.gz"
-      sha256 "ac9b4496a07e4090256cb053a1a0bc37c6fadfdd19fc14076c9f2a28e91fa000"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-scarab_0.17.0-alpha_linux_arm64.tar.gz"
+      sha256 "3296cf99def5340fb6bdfc544fc1b9977ec0cf45349a1ee945e77a67e39fd95c"
       define_method(:install) do
         bin.install "sirsi-scarab"
       end
