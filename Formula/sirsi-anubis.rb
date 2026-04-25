@@ -5,21 +5,21 @@
 class SirsiAnubis < Formula
   desc "Infrastructure scanner and cleaner — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.17.0-alpha"
+  version "0.17.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-anubis_0.17.0-alpha_darwin_amd64.tar.gz"
-      sha256 "efe8eb6f3b4173b9ada3e4c24e7fd37d0d5e502fb5bd8b7c765ec8c9354e73d4"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.1/sirsi-anubis_0.17.1_darwin_amd64.tar.gz"
+      sha256 "879336672e29c955b7e2d0c3ed9a50010cb3c1783f383b4a827da37caf5f478f"
 
       define_method(:install) do
         bin.install "sirsi-anubis"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-anubis_0.17.0-alpha_darwin_arm64.tar.gz"
-      sha256 "7a5e7d40ff37dad8802f5855e8ced3720cb15e73224d119a3bec6f1c7c25e9cf"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.1/sirsi-anubis_0.17.1_darwin_arm64.tar.gz"
+      sha256 "08e040a5ae70fcb2095ec10698a2d33bdd12b084c6b4de8a2828b414e262225a"
 
       define_method(:install) do
         bin.install "sirsi-anubis"
@@ -29,15 +29,15 @@ class SirsiAnubis < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-anubis_0.17.0-alpha_linux_amd64.tar.gz"
-      sha256 "7b6e2fb00b72638e9b8c4da9eba008ab9e47eaa349f044c246e2be08f6cd216d"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.1/sirsi-anubis_0.17.1_linux_amd64.tar.gz"
+      sha256 "707f54996fb19da082512f4eba8fed60e1a65a5cfa920d33cc06cfed315de419"
       define_method(:install) do
         bin.install "sirsi-anubis"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.0-alpha/sirsi-anubis_0.17.0-alpha_linux_arm64.tar.gz"
-      sha256 "d5a3d1b149fb5c5f4be8b87907cada091d7184f7fc13f9da2c30c8bd5af1cfb3"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.17.1/sirsi-anubis_0.17.1_linux_arm64.tar.gz"
+      sha256 "d865986d7b472039cc53ccaffb00f36f1391b3b234b4631001a7e63c12fbf14c"
       define_method(:install) do
         bin.install "sirsi-anubis"
       end
