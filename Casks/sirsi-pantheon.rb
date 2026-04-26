@@ -9,15 +9,6 @@ cask "sirsi-pantheon" do
 
   app "Pantheon.app"
 
-  postflight do
-    # Symlink CLI into PATH so `sirsi` works from terminal
-    system_command "/bin/ln",
-                   args: ["-sf",
-                          "#{appdir}/Pantheon.app/Contents/MacOS/sirsi",
-                          "/usr/local/bin/sirsi"],
-                   sudo: true
-  end
-
   uninstall quit:      "ai.sirsi.pantheon",
             launchctl: "ai.sirsi.pantheon"
 
