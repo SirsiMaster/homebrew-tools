@@ -5,21 +5,21 @@
 class SirsiGuard < Formula
   desc "System resource monitoring with accelerator detection — standalone deity"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.18.0"
+  version "0.23.0-beta"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.18.0/sirsi-guard_0.18.0_darwin_amd64.tar.gz"
-      sha256 "4710e9c7ceba45fba1ae4e870b0da3dfbd80bd3df5e3b57b5ae52f6615e6b60f"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.23.0-beta/sirsi-guard_0.23.0-beta_darwin_amd64.tar.gz"
+      sha256 "0a73858595b1364dc5a28a60c9d1cd630a9dfb9e025f22f94698163f6f8ae3f3"
 
       define_method(:install) do
         bin.install "sirsi-guard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.18.0/sirsi-guard_0.18.0_darwin_arm64.tar.gz"
-      sha256 "eeefeb92096c6556458de724196837d3fdb229a906ac3b392eb2c7695abcd38e"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.23.0-beta/sirsi-guard_0.23.0-beta_darwin_arm64.tar.gz"
+      sha256 "3a3ac2dffb78ef58627967eb98ee6a70727bf17afb6b9e85c0e7213994f18035"
 
       define_method(:install) do
         bin.install "sirsi-guard"
@@ -29,15 +29,15 @@ class SirsiGuard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.18.0/sirsi-guard_0.18.0_linux_amd64.tar.gz"
-      sha256 "a89f1d21cc169f22761a2bc9914b3474b223aaac372ff4b6597d6f11688c5b38"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.23.0-beta/sirsi-guard_0.23.0-beta_linux_amd64.tar.gz"
+      sha256 "ae54926cb6e9bd6b86c3190660bbba8cdb83ae3ee1fa4c42072e1584cc37b481"
       define_method(:install) do
         bin.install "sirsi-guard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.18.0/sirsi-guard_0.18.0_linux_arm64.tar.gz"
-      sha256 "e74e5d405c1c4df5c6ecda0565ee698e116d356a7321ac51ad0717679e9a36b1"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.23.0-beta/sirsi-guard_0.23.0-beta_linux_arm64.tar.gz"
+      sha256 "76c410e586ab575de9f60b581f6611c3fc316a074f1d927cca9df58f5453e2a1"
       define_method(:install) do
         bin.install "sirsi-guard"
       end
