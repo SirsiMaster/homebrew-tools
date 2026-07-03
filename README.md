@@ -11,9 +11,24 @@ brew install sirsi-pantheon
 
 ## Available Formulae
 
-| Formula | Description | Status |
-|---------|-------------|--------|
-| `sirsi-pantheon` | Unified DevOps Intelligence Platform | 🔜 Coming with v0.4.0-alpha |
+| Formula | Description |
+|---------|-------------|
+| `sirsi-pantheon` | Unified DevOps Intelligence Platform — One Install, All Deities |
+| `sirsi-anubis` | Infrastructure scanner and cleaner — standalone deity |
+| `sirsi-guard` | System resource monitoring with accelerator detection — standalone deity |
+| `sirsi-maat` | Quality assurance and audit engine — standalone deity |
+| `sirsi-scarab` | Fleet sweep and network discovery — standalone deity |
+| `sirsi-thoth` | AI project memory with context compression — standalone deity |
+
+## Available Casks
+
+```bash
+brew install --cask sirsi-pantheon
+```
+
+| Cask | Description |
+|------|-------------|
+| `sirsi-pantheon` | DevOps intelligence platform — menu bar monitor + CLI (macOS `.app`) |
 
 ## About
 
