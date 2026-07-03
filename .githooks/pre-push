@@ -1,0 +1,41 @@
+#!/bin/bash
+# Pre-Push Secrets Gate
+# Install: git config core.hooksPath .githooks
+#
+# Scans only the commits being pushed (fast) via git's pre-push stdin contract:
+# "<local-ref> <local-sha> <remote-ref> <remote-sha>". A new branch has
+# remote-sha = all zeros, in which case we scan the whole local branch history once.
+# Do NOT bypass with `git push --no-verify` — fix the finding, or if it's a verified-clean
+# false positive, add it to .gitleaks.toml individually (never blanket-suppress).
+
+set -uo pipefail
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+echo ""
+echo "  𓁦 pre-push secrets gate..."
+echo ""
+
+if command -v gitleaks >/dev/null 2>&1; then
+  echo "  → scanning for committed secrets (gitleaks)..."
+  ZERO="0000000000000000000000000000000000000000"
+  RANGE=""
+  while read -r local_ref local_sha remote_ref remote_sha; do
+    [ "$local_sha" = "$ZERO" ] && continue
+    if [ "$remote_sha" = "$ZERO" ]; then
+      RANGE="$local_sha"   # new branch: scan the whole thing once
+    else
+      RANGE="${RANGE:+$RANGE }${remote_sha}..${local_sha}"
+    fi
+  done
+  if [ -n "$RANGE" ]; then
+    for r in $RANGE; do
+      gitleaks detect --log-opts="$r" --no-banner --redact \
+        || { echo "  ❌ gitleaks found a committed secret in $r — fix before pushing. Do NOT --no-verify past this."; exit 1; }
+    done
+  fi
+else
+  echo "  ⚠ gitleaks not installed — secret scan SKIPPED (install: brew install gitleaks). CI still gates this."
+fi
+
+echo "  ✅ Gate passed"
+echo ""
