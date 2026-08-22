@@ -7,10 +7,13 @@ cask "sirsi-pantheon" do
   desc "DevOps intelligence platform — menu bar monitor + CLI"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
 
-  app "Pantheon.app"
+  depends_on macos: :monterey
 
-  uninstall quit:      "ai.sirsi.pantheon",
-            launchctl: "ai.sirsi.pantheon"
+  app "Pantheon.app"
+  binary "#{appdir}/Pantheon.app/Contents/MacOS/sirsi"
+
+  uninstall launchctl: "ai.sirsi.pantheon",
+            quit:      "ai.sirsi.pantheon"
 
   zap trash: [
     "~/.config/pantheon",
@@ -21,12 +24,11 @@ cask "sirsi-pantheon" do
     Pantheon.app includes both the menu bar monitor and the sirsi CLI.
 
     To start the menu bar at login:
-      cp /Applications/Pantheon.app/Contents/Resources/ai.sirsi.pantheon.plist ~/Library/LaunchAgents/
-      launchctl load ~/Library/LaunchAgents/ai.sirsi.pantheon.plist
+      /Applications/Pantheon.app/Contents/MacOS/sirsi surface install gui
 
     Quick start:
       sirsi scan       Find waste on your machine
-      sirsi doctor     Check system health
+      sirsi diagnose   Check system health
       sirsi ghosts     Find remnants of uninstalled apps
   EOS
 end
