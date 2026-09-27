@@ -5,13 +5,13 @@
 class SirsiPantheon < Formula
   desc "Unified DevOps Intelligence Platform — One Install, All Deities"
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
-  version "0.24.9"
+  version "0.24.10"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.24.9/sirsi-pantheon_0.24.9_darwin_amd64.tar.gz"
-      sha256 "a8c180b190d98c0a94c2e6e65d81e608ef1ea75ee32b1865395551df6bc0b900"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.24.10/sirsi-pantheon_0.24.10_darwin_amd64.tar.gz"
+      sha256 "ce3a8f1471d28dfc25183adbcbdb568850cf6d27157129df5b1c77270663871e"
 
       define_method(:install) do
         bin.install "sirsi"
@@ -19,8 +19,8 @@ class SirsiPantheon < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.24.9/sirsi-pantheon_0.24.9_darwin_arm64.tar.gz"
-      sha256 "540792d497074f4c8507d957f7d436553e094210431ead9ce8540636fceabb0b"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.24.10/sirsi-pantheon_0.24.10_darwin_arm64.tar.gz"
+      sha256 "4be5b2f3a9aaf81326eaa49a94323240639c9a335e55d27902cdb8a1aad40700"
 
       define_method(:install) do
         bin.install "sirsi"
@@ -31,16 +31,16 @@ class SirsiPantheon < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.24.9/sirsi-pantheon_0.24.9_linux_amd64.tar.gz"
-      sha256 "62d73114e097317cceec6abde6a68b967ff152a5b4d4652493356f541b2411db"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.24.10/sirsi-pantheon_0.24.10_linux_amd64.tar.gz"
+      sha256 "42de042ab9d140674b1634709f01fbec0e5257e2bde3c037c54bf22ebc811c56"
       define_method(:install) do
         bin.install "sirsi"
         bin.install "sirsi-agent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.24.9/sirsi-pantheon_0.24.9_linux_arm64.tar.gz"
-      sha256 "d8a6268ea1ac3e82a7c7ca782d74d75cfb064edc35fc2670c6651158970e16b7"
+      url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v0.24.10/sirsi-pantheon_0.24.10_linux_arm64.tar.gz"
+      sha256 "1984d930e6fed46a4500fd4271145cf40a67746ae3c949b6642272d213afae13"
       define_method(:install) do
         bin.install "sirsi"
         bin.install "sirsi-agent"
