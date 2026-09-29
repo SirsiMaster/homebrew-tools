@@ -1,6 +1,6 @@
 cask "sirsi-pantheon" do
-  version "0.24.26"
-  sha256 "3b96fc2a6cbf9a5184976b4f835a878f2b4784cb5943ef23e47e8831cf9c61d0"
+  version "0.24.51"
+  sha256 "ffe3dd2a5d6464830cf4afdac70b6e02008e386af2132f389c84eacbb00f9d96"
 
   url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v#{version}/SirsiPantheon-#{version}-arm64.dmg"
   name "Sirsi Pantheon"
@@ -8,6 +8,7 @@ cask "sirsi-pantheon" do
   homepage "https://github.com/SirsiMaster/sirsi-pantheon"
 
   app "Pantheon.app"
+  binary "#{appdir}/Pantheon.app/Contents/MacOS/sirsi", target: "sirsi"
 
   uninstall quit:      "ai.sirsi.pantheon",
             launchctl: "ai.sirsi.pantheon"
