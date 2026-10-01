@@ -1,6 +1,6 @@
 cask "sirsi-pantheon" do
-  version "0.24.59"
-  sha256 "5cd79082257d6005904197a1d8cf511961798858b0d8a8ab99a039896b1da51f"
+  version "0.24.60"
+  sha256 "a13f31784d3b34f43607b7fb9d14b2429053578ebf1ce61934c045494c018019"
 
   url "https://github.com/SirsiMaster/sirsi-pantheon/releases/download/v#{version}/SirsiPantheon-#{version}-arm64.dmg"
   name "Sirsi Pantheon"
