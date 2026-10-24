@@ -1,5 +1,9 @@
 # AGENTS.md
 
+## Sirsi Portfolio Manifesto
+
+Before non-trivial work, read `/Users/thekryptodragon/Development/SIRSI_MANIFESTO.md`. This repository is distribution-only and must represent the portfolio and available Pantheon surfaces exactly as the manifesto and current release artifacts define them.
+
 
 ## Development Workspace Router Law
 
