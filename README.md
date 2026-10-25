@@ -6,14 +6,28 @@ Official Homebrew tap for [Sirsi Technologies](https://github.com/SirsiMaster) t
 
 ```bash
 brew tap SirsiMaster/tools
-brew install sirsi-pantheon
+brew install --cask sirsimaster/tools/sirsi-pantheon
+```
+
+The cask is the canonical Mac product. It installs `Pantheon.app` and exposes
+the bundled `sirsi` CLI. Homebrew must never guess between a formula and cask:
+
+```bash
+brew upgrade --cask sirsimaster/tools/sirsi-pantheon
+```
+
+For a deliberately headless CLI/agent installation:
+
+```bash
+brew install --formula sirsimaster/tools/sirsi-pantheon-cli
+brew upgrade --formula sirsimaster/tools/sirsi-pantheon-cli
 ```
 
 ## Available Formulae
 
 | Formula | Description |
 |---------|-------------|
-| `sirsi-pantheon` | Unified DevOps Intelligence Platform — One Install, All Deities |
+| `sirsi-pantheon-cli` | Headless Pantheon CLI and agent; not the Mac application |
 | `sirsi-anubis` | Infrastructure scanner and cleaner — standalone deity |
 | `sirsi-guard` | System resource monitoring with accelerator detection — standalone deity |
 | `sirsi-maat` | Quality assurance and audit engine — standalone deity |
@@ -23,7 +37,7 @@ brew install sirsi-pantheon
 ## Available Casks
 
 ```bash
-brew install --cask sirsi-pantheon
+brew install --cask sirsimaster/tools/sirsi-pantheon
 ```
 
 | Cask | Description |
