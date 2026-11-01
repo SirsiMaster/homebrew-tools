@@ -1,6 +1,6 @@
 cask "sirsi-pantheon" do
-  version "0.24.155"
-  sha256 "6a77c54ce493ccc2d5dc5a27de7caae848af7a4bfc98f3ab3e6d31547009c1cb"
+  version "0.24.156"
+  sha256 "7c81af5a2b41b2c8bf7b1a1f42c1a4324d456d832e2800af9b87b8f436af7613"
 
   depends_on arch: :arm64
   depends_on macos: :ventura
